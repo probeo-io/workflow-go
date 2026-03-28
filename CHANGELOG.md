@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## [0.1.0] - 2026-03-28
 
 - Initial Go port of @probeo/workflow
 - Stage-based pipeline engine with concurrent and collective step modes
@@ -11,3 +11,5 @@
 - Resource injection
 - Progress callbacks
 - Zero external dependencies (stdlib only)
+- Expanded test suite (31 tests: workflow, store)
+- "See Also" cross-links to related packages
