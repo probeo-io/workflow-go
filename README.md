@@ -408,6 +408,15 @@ But most AI workloads are pipelines running on a single machine. Items flow thro
 
 If you need distributed execution across machines, use Temporal. If you need a pipeline engine that runs in a single binary with zero infrastructure, use this.
 
+## See Also
+
+| Package | Description |
+|---|---|
+| [@probeo/workflow](https://github.com/probeo-io/workflow) | TypeScript version of this package |
+| [workflow-py](https://github.com/probeo-io/workflow-py) | Python version of this package |
+| [anymodel-go](https://github.com/probeo-io/anymodel-go) | Unified LLM router for Go |
+| [anyserp-go](https://github.com/probeo-io/anyserp-go) | Unified SERP API router for Go |
+
 ## License
 
 MIT
