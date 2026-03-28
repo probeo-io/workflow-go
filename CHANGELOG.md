@@ -13,3 +13,4 @@
 - Zero external dependencies (stdlib only)
 - Expanded test suite (31 tests: workflow, store)
 - "See Also" cross-links to related packages
+- GitHub Actions CI (Go 1.22-1.26 matrix)
