@@ -1,3 +1,3 @@
-module github.com/probeo-io/workflow-go
+module github.com/probeo-io/probeo-workflow-go
 
 go 1.22
