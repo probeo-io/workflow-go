@@ -1,5 +1,9 @@
 # workflow-go
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/probeo-io/workflow-go.svg)](https://pkg.go.dev/github.com/probeo-io/workflow-go)
+[![License](https://img.shields.io/github/license/probeo-io/workflow-go)](https://github.com/probeo-io/workflow-go/blob/main/LICENSE)
+[![CI](https://github.com/probeo-io/workflow-go/actions/workflows/ci.yml/badge.svg)](https://github.com/probeo-io/workflow-go/actions/workflows/ci.yml)
+
 Stage-based pipeline engine for AI workloads. Zero dependencies. Code decides what happens. AI does the work.
 
 Most AI pipelines are linear: fetch data, analyze it, enrich it, summarize it. Some stages call LLMs. Some don't. The control flow is deterministic even when AI is involved. You don't need a graph framework for that.
@@ -407,6 +411,24 @@ But most AI workloads are pipelines running on a single machine. Items flow thro
 | Lock-in | None | Framework-specific SDKs |
 
 If you need distributed execution across machines, use Temporal. If you need a pipeline engine that runs in a single binary with zero infrastructure, use this.
+
+## Why not LangGraph?
+
+LangGraph is for agent orchestration. Cyclic graphs where an LLM decides what to do next.
+
+Most AI workloads are pipelines. Items flow through stages. The control flow is deterministic. For that:
+
+| | workflow-go | LangGraph |
+|---|---|---|
+| Dependencies | 0 | Heavy Python dependency tree |
+| Mental model | Steps in order | Nodes, edges, state reducers |
+| Concurrency | Per-item goroutines with limits | Fan-out via Send pattern |
+| Persistence | FileStore (filesystem) | Checkpointer (Postgres, memory) |
+| Resume | Immutable step outputs | Checkpoint after every node |
+
+## Support
+
+If workflow is useful to you, consider giving it a star. It helps others discover the project.
 
 ## See Also
 
